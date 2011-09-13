@@ -26,24 +26,16 @@ Running
 -------
 
 This daemon can be run by using the wrapper playernsd script:
->
-> ./playernsd
->
+	$ ./playernsd
 
 More options can be found by executing:
->
-> ./playernsd --help
->
+	$ ./playernsd --help
 
 For example, to run an example wifi simulator using NS3 as a backend:
->
-> ./playernsd -o "verbose=true" ../nssim/build/wifisim
->
+	$ ./playernsd -o "verbose=true" ../nssim/build/wifisim
 
 Or for a simple script, that provides line of sight communication (for use
 with Stage maps):
->
-> ./playernsd -o image=pathto/cave.png,width=25,height=25 -v examples/lineofsight.py
->
+	$ ./playernsd -o image=pathto/cave.png,width=25,height=25 -v examples/lineofsight.py
 
 These paths assume you are running directly from the repository.

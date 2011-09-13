@@ -18,9 +18,11 @@ Dependencies
 * [Python][3] (tested with python 2.5 and python 2.7)
 * [Player][1] (tested with 3.0.2)
 * [CMake][2] (tested with 2.8.1)
+* [Doxygen][4] (for building documentation)
 
  [2]: http://www.cmake.org/
  [3]: http://www.python.org/
+ [4]: http://www.stack.nl/~dimitri/doxygen/
 
 Running
 -------

@@ -1,0 +1,18 @@
+// Protocol between simulation and playernsd
+
+message Control {
+	enum Type { CONNECT = 1; DISCONNECT = 2; }
+	required string client_id = 1;
+}
+
+message Property {
+	enum Type { GET = 1; SET = 2; }
+	required string name = 1;
+	optional string value = 2;
+}
+
+message Message {
+	required string from = 1;
+	required string to = 2;
+	required string data = 3;
+}

@@ -24,6 +24,12 @@ Dependencies
  [4]: http://www.python.org/
  [5]: http://www.stack.nl/~dimitri/doxygen/
 
+### Optional
+
+* [NSSim][6]
+
+ [6] http://github.com/raedwulf/nssim
+
 Running
 -------
 
@@ -35,7 +41,8 @@ More options can be found by executing:
 
  $ ./playernsd --help
 
-For example, to run an example wifi simulator using NS3 as a backend:
+For example, to run an example wifi simulator using NS3 as a backend,
+with verbose logging:
 
  $ ./playernsd -o "verbose=true" ../nssim/build/wifisim
 

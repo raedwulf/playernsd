@@ -283,7 +283,8 @@ class ClientManager():
         msg[msg.find('\n')+1:])
     else:
       for v in self.__clients.itervalues():
-        self.send(msg, v.socket, v.address)
+        if msg.split(' ')[1] != v.name:
+          self.send(msg, v.socket, v.address)
   ## Receive a message from a client.
   #
   # This is a wrapper function to receive a message from a client and

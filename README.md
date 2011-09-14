@@ -28,7 +28,7 @@ Dependencies
 
 * [NSSim][6]
 
- [6] http://github.com/raedwulf/nssim
+ [6]: http://github.com/raedwulf/nssim
 
 Running
 -------

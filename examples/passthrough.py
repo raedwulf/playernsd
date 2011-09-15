@@ -61,6 +61,13 @@ class Simulation(Thread):
   # @param clientid Client ID of client added.
   def new_client(self, clientid):
     self.clients.append(clientid)
+  ## Remove a client after its disconnected.
+  #
+  # When clients disconnect, we can't send to them anymore unfortunately.
+  # @param self The simulation::Simulation instance.
+  # @param clientid Client ID of client to be removed.
+  def remove_client(self, clientid):
+    self.clients.remove(clientid)
   ## Send a message simulated.
   # @param self The simulation::Simulation instance.
   # @param _from The client that the message comes from.

@@ -83,6 +83,13 @@ class Simulation(Thread):
     self.clients.append(clientid)
     # We need to have at least an initial position.
     #self.positions[clientid] = (0, 0)
+  ## Remove a client after its disconnected.
+  #
+  # When clients disconnect, we can't send to them anymore unfortunately.
+  # @param self The simulation::Simulation instance.
+  # @param clientid Client ID of client to be removed.
+  def remove_client(self, clientid):
+    self.clients.remove(clientid)
   ## Tracing a line to check for intersections.
   #
   # This is for detecting if the robot can send a message (or not).

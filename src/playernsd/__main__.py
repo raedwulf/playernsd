@@ -178,8 +178,8 @@ class ClientManager():
     self.__clients[address].name = name
     self.__clients[address].version = version
     self.__clientids[name] = self.__clients[address]
-    if simulation:
-      simulation.new_client(name)
+    if self.__sim:
+      self.__sim.new_client(name)
   ## Check if the address is handled by the client manager.
   # @param identifier The identifier to refer uniquely to a client.
   def has_client(self, identifier):
@@ -207,6 +207,8 @@ class ClientManager():
   def remove_client(self, address):
     with self.__client_lock:
       if self.__clients[address].name in self.__clientids:
+        if self.__sim:
+          self.__sim.remove_client(self.__clients[address].name)
         del self.__clientids[self.__clients[address].name]
       del self.__clients[address]
   ## Get a list of client ids.

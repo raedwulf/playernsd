@@ -140,6 +140,12 @@ class Simulation(Thread):
     self.cidi[clientid] = self.cidn
     self.cidt.append(clientid)
     self.cidn += 1
+  ## Remove a client.
+  #
+  # This is unsupported, because external simulations usually need pre-configured
+  # networks.
+  def remove_client(self, clientid):
+    pass
   ## Send a message in the target executable.
   # @param self The playernsd::simulation::Simulation instance.
   # @param _from The client that the message comes from.
